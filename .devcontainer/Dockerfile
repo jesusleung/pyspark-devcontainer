@@ -4,7 +4,7 @@ FROM jupyter/pyspark-notebook:latest
 
 # name your environment and choose the python version
 ARG conda_env=vscode_pyspark
-ARG py_ver=3.11
+ARG py_ver=3.12
 
 # you can add additional libraries you want mamba to install by listing them below the first line and ending with "&& \"
 RUN mamba create --yes -p "${CONDA_DIR}/envs/${conda_env}" python=${py_ver} ipython ipykernel && \
